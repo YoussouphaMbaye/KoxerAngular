@@ -1,0 +1,75 @@
+<div class="wrapper">
+  <div class="page-header section-dark" style="background-image: url('assets/img/antoine-barres.jpg')">
+      <div class="filter"></div>
+      <div class="content-center">
+          <div class="container">
+              <div class="title-brand">
+                  <div class="angular-logo">
+                      <img src="assets/img/angular2-logo.png" alt="">
+                  </div>
+                  <h1 class="presentation-title">Galsen Koxer</h1>
+                  <div class="fog-low">
+                      <img src="assets/img/fog-low.png" alt="">
+                  </div>
+                  <div class="fog-low right">
+                      <img src="assets/img/fog-low.png" alt="">
+                  </div>
+              </div>
+
+              <h2 class="presentation-subtitle text-center">Nous facilitons votre voyage</h2>
+          </div>
+      </div>
+      <div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); "></div>
+      <h6 class=" category-absolute ml-auto mr-auto">Designed and coded by
+      <!-- <h6 class="category category-absolute">Designed and coded by -->
+
+          <a href="https://www.creative-tim.com" target="_blank">
+              <img src="assets/img/creative-tim-white-slim2.png" class="creative-tim-logo">
+          </a>
+      </h6>
+  </div>
+</div>
+  <div  class="container" *ngIf="voitures">
+    
+  <div class="row">
+    <div class="col-md-5" *ngFor="let v of voitures._embedded.voitures"  style="padding: 5%;">
+    <div class="card"  >
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5>{{v.type}}</h5>
+        <div *ngIf="chf==v.idVoiture">
+          <hr/>
+          <h5>Chauffeur</h5>
+          <p>{{chauffeur.nom}}</p>
+        </div>
+        
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+       
+        <button class="btn btn-primary" (click)="getChauffeur(v.idVoiture)">Chauffeur</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        1 of 2
+      </div>
+      <div class="col">
+        2 of 2
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        1 of 3
+      </div>
+      <div class="col">
+        2 of 3
+      </div>
+      <div class="col">
+        3 of 3
+      </div>
+    </div>
+  </div>
